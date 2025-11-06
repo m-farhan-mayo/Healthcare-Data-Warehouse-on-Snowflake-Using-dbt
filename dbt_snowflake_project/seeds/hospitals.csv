@@ -1,0 +1,51 @@
+hospital_id,hospital_name,city,capacity_beds,record_start,record_end
+H01,"saaqib, taj and aariz hospital",Quetta,385,2023-01-01,2023-10-22
+H02,"Collins, Wade and Garrison Hospital",Karachi,424,2023-01-01,
+H03, Naeem Group Hospital ,Karachi,474,2023-01-01,
+H04,Lutf LLC Hospital,Quetta,77,2023-01-01,
+H05,"Latif, Kaamil and Naeem Hospital",Lahore,237,2023-01-01,2023-08-06
+H06,Abaan-Jabir Hospital,Lahore,222,2023-01-01,2023-11-15
+H07,"Sabeeh, Jaabir and Umaarah Hospital",Peshawar,447,2023-01-01,
+H08,Umar-Batool Hospital,Peshawar,439,2023-01-01,
+H09,Ihsaan-Tafazal Hospital,Islamabad,360,2023-01-01,2023-12-02
+H10,Aamirah-Awani Hospital,Karachi,493,2023-01-01,
+H11,"Lewis, Martinez and Buchanan Hospital",Peshawar,273,2023-01-01,
+H12,yar-man hospital,Quetta,205,2023-01-01,2023-10-21
+H13,gulfam-batool hospital,Quetta,173,2023-01-01,
+H14,Jameel-Talib Hospital,Karachi,307,2023-01-01,
+H15,Tajammul LLC Hospital,Quetta,487,2023-01-01,
+H16,"Thomas, Bennett and Martinez Hospital",Islamabad,250,2023-01-01,
+H17,"BIZHAN, LUTF AND UBAYDULLAH HOSPITAL",Lahore,89,2023-01-01,
+H18,"MCGEE, CANNON AND BOYD HOSPITAL",Islamabad,384,2023-01-01,2023-11-25
+H19, R@bi@h-S@@l H0spit@l ,Quetta,73,2023-01-01,
+H20,Blair and Sons Hospital.,Islamabad,93,2023-01-01,
+H21,"Ghauth, Sabil and Saad Hospital",Lahore,395,2023-01-01,2023-08-01
+H22,Rush Group Hospital,Karachi,450,2023-01-01,
+H23,raatib-badr udeen hospital,Lahore,215,2023-01-01,
+H24,"Wilson, Thompson and Campbell Hospital",Karachi,129,2023-01-01,
+H25,"TAJAMMUL, MAN AND DAKHIL HOSPITAL",Lahore,353,2023-01-01,
+H26,"aryan, sabil and ejlaal hospital",Karachi,239,2023-01-01,2023-10-04
+H27, TAHAW-WUR-GHAUTH HOSPITAL ,Quetta,461,2023-01-01,2023-10-20
+H28,schmidt inc hospital,Islamabad,365,2023-01-01,
+H29,jabir group hospital,Quetta,345,2023-01-01,2023-07-05
+H30,rabbani-kashif hospital,Lahore,169,2023-01-01,
+H31,mcgee llc hospital,Quetta,197,2023-01-01,
+H32,"Green, Wall and Nguyen Hospital",Karachi,136,2023-01-01,
+H33,RABEE-IFTIKHAAR HOSPITAL,Quetta,195,2023-01-01,2023-08-23
+H34,Talhah-Sabil Hospital,Quetta,377,2023-01-01,2023-10-20
+H35,"moreno, gonzalez and rogers hospital",Quetta,295,2023-01-01,2023-09-09
+H36,Mills-Smith Hospital,Lahore,344,2023-01-01,
+H37,livingston-logan hospital,Quetta,85,2023-01-01,
+H38,Man Inc Hospital,Lahore,186,2023-01-01,
+H39,Jabr-Awj Hospital,Islamabad,245,2023-01-01,2023-10-08
+H40,"Qaseem, Dawud and Ghayoor Hospital",Peshawar,85,2023-01-01,
+H41,Bizhan Group Hospital,Quetta,322,2023-01-01,
+H42,Jaabir PLC Hospital,Islamabad,186,2023-01-01,
+H43,Randall-Drake Hospital,Quetta,456,2023-01-01,
+H44,"Awamil, Talat and Omar Hospital",Peshawar,293,2023-01-01,2023-11-07
+H45,"Garcia, Yates and Zavala Hospital",Lahore,401,2023-01-01,2023-11-29
+H46,Vahar LLC Hospital,Islamabad,474,2023-01-01,
+H47,Murray-White Hospital,Quetta,463,2023-01-01,2023-09-08
+H48,chavez llc hospital,Lahore,112,2023-01-01,
+H49,Johnson and Sons Hospital,Quetta,400,2023-01-01,2023-07-26
+H50,king plc hospital,Karachi,278,2023-01-01,

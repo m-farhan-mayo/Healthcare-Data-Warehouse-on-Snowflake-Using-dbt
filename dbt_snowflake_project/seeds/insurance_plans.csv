@@ -1,0 +1,6 @@
+insurance_plan_id,provider_name,plan_name,coverage_percent,record_start,record_end
+INS001,MEDINA PLC, Gold ,80,2023-01-01,2023-11-04
+INS002,Tahaw-wur-Bambad,STANDARD,85,2023-01-01,2023-09-28
+INS003,Qusay and Sons,Standard,80,2023-01-01,
+INS004,Donaldson PLC.,GOLD,90,2023-01-01,
+INS005,Vazquez LLC,gold,80,2023-01-01,2023-07-28

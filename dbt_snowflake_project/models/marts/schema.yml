@@ -1,0 +1,186 @@
+version: 2
+
+models:
+  # DIMENSION TABLES
+  - name: dim_departments
+    description: "Department dimension table"
+    columns:
+      - name: department_id
+        description: "Primary key"
+        tests:
+          - unique
+          - not_null
+      - name: department_name
+        tests:
+          - not_null
+      - name: hospital_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_hospitals')
+              field: hospital_id
+
+  - name: dim_doctors
+    description: "Doctor dimension table"
+    columns:
+      - name: doctor_id
+        description: "Primary key"
+        tests:
+          - unique
+          - not_null
+      - name: full_name
+        tests:
+          - not_null
+      - name: specialization
+      - name: department_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_departments')
+              field: department_id
+      - name: hospital_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_hospitals')
+              field: hospital_id
+      - name: phone_no
+
+  - name: dim_hospitals
+    description: "Hospital dimension table"
+    columns:
+      - name: hospital_id
+        tests:
+          - unique
+          - not_null
+      - name: hospital_name
+        tests:
+          - not_null
+      - name: city
+      - name: capacity_beds
+
+  - name: dim_insurance_plans
+    description: "Insurance plan dimension table"
+    columns:
+      - name: insurance_plan_id
+        tests:
+          - unique
+          - not_null
+      - name: plan_name
+        tests:
+          - not_null
+      - name: provider_name
+      - name: coverage_percent
+
+  - name: dim_patients
+    description: "Patient dimension table"
+    columns:
+      - name: patient_id
+        tests:
+          - unique
+          - not_null
+      - name: first_name
+        tests:
+          - not_null
+      - name: last_name
+        tests:
+          - not_null
+      - name: gender
+      - name: dob
+      - name: phone_no
+      - name: email
+      - name: address
+      - name: city
+      - name: insurance_plan
+        tests:
+          - relationships:
+              to: ref('dim_insurance_plans')
+              field: insurance_plan_id
+
+  # FACT TABLES
+  - name: fact_visits
+    description: "Fact table for patient visits"
+    columns:
+      - name: visit_id
+        tests:
+          - unique
+          - not_null
+      - name: patient_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_patients')
+              field: patient_id
+      - name: doctor_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_doctors')
+              field: doctor_id
+      - name: hospital_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_hospitals')
+              field: hospital_id
+      - name: visit_date
+      - name: visit_type
+      - name: diagnosis_code
+      - name: height_cm
+      - name: weight_kg
+
+  - name: fact_billing
+    description: "Fact table for billing"
+    columns:
+      - name: bill_id
+        tests:
+          - unique
+          - not_null
+      - name: visit_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('fact_visits')
+              field: visit_id
+      - name: total_amount
+      - name: insurance_covered
+      - name: patient_payable
+      - name: payment_status
+      - name: bill_date
+
+  - name: fact_treatments
+    description: "Fact table for treatments"
+    columns:
+      - name: treatment_id
+        tests:
+          - unique
+          - not_null
+      - name: visit_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('fact_visits')
+              field: visit_id
+      - name: treatment_code
+      - name: treatment_desc
+      - name: treatment_cost
+
+  # AGGREGATED VIEW
+  - name: patient_visit_summary
+    description: "Aggregated view combining patient visits, billing, and dimensions"
+    columns:
+      - name: visit_id
+        tests:
+          - unique
+          - not_null
+      - name: first_name
+      - name: last_name
+      - name: gender
+      - name: city
+      - name: doctor_name
+      - name: hospital_name
+      - name: visit_type
+      - name: diagnosis_code
+      - name: billed_amount
+      - name: patient_payable
+      - name: payment_status
